@@ -12,7 +12,7 @@
   "dependencies": {
     "@hyperjump/json-schema-bundle": "^0.4.0",
     "@jridgewell/resolve-uri": "^3.1.0",
-    "glob": "^8.0.3",
+    "glob": "^10.0.0",
     "parse-uri": "^1.0.7"
   }
 }
