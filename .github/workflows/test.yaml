@@ -1,0 +1,19 @@
+---
+name: Test
+
+on:
+  push:
+
+jobs:
+  release:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test bundling schema
+        shell: bash
+        run: |
+          npm install
+          node bundle.js
