@@ -24,7 +24,7 @@
             "type": "array",
             "minItems": 1,
             "items": {
-                "$ref": "mason-registry.json/enums/spdx-license"
+                "$ref": "mason-registry.json/enums/license"
             }
         },
         "languages": {
