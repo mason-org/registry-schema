@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://json.schemastore.org/mason-registry.json/enums/license",
-    "oneOf": [
+    "anyOf": [
         {
             "$ref": "spdx-license"
         },
@@ -10,6 +10,7 @@
         },
         {
             "type": "string",
+            "pattern": "^[a-zA-Z0-9-.:]+\\+?(?: +(?:WITH|AND|OR) +[a-zA-Z0-9-.:]+\\+?)*$",
             "$comment": "For SPDX license expressions that are unfeasible to validate via JSON Schema (e.g. GPL-3.0-only WITH Qt-GPL-exception-1.0)"
         }
     ]
