@@ -57,6 +57,9 @@
         "opt": {
             "$ref": "mason-registry.json/components/opt"
         },
+        "neovim": {
+            "$ref": "mason-registry.json/components/neovim"
+        },
         "ci_skip": {
             "oneOf": [
                 {
