@@ -4,6 +4,7 @@ const fs = require("fs");
 const Bundler = require("@hyperjump/json-schema-bundle");
 const resolveUri = require("@jridgewell/resolve-uri");
 const parseURI = require("parse-uri");
+const { pathToFileURL } = require("url");
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -87,16 +88,17 @@ async function main() {
   for (const schema of await glob(
     path.join(
       path.resolve(__dirname, "schemas"),
-      "{components,enums}/**/*.json",
+      "{components,enums}/**/*.json"
     ),
-    {},
+    {}
   )) {
     console.log("Adding schema", schema);
     Bundler.add(JSON.parse(await readFile(schema)));
   }
 
   const main = await Bundler.get(
-    `file://${path.resolve(__dirname, "schemas", "package.schema.json")}`,
+    pathToFileURL(path.resolve(__dirname, "schemas", "package.schema.json"))
+      .href
   );
 
   console.log("Bundling…");
@@ -107,7 +109,7 @@ async function main() {
   await mkdir(outDir);
   await writeFile(
     path.resolve(outDir, "package.schema.json"),
-    JSON.stringify(schema, null, 2),
+    JSON.stringify(schema, null, 2)
   );
 }
 
