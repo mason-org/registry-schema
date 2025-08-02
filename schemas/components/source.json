@@ -23,6 +23,13 @@
         {
             "type": "object",
             "properties": {
+                "supported_platforms": {
+                    "type": "array",
+                    "description": "List of supported platforms. This should only be specified when supported platforms cannot be inferred from the source definition itself.",
+                    "items": {
+                        "$ref": "/mason-registry.json/enums/platform"
+                    }
+                },
                 "version_overrides": {
                     "type": "array",
                     "items": {

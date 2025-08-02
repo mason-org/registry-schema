@@ -14,13 +14,6 @@
             "items": {
                 "type": "string"
             }
-        },
-        "supported_platforms": {
-            "type": "array",
-            "description": "List of platforms supported by the pypi package.",
-            "items": {
-                "$ref": "/mason-registry.json/enums/platform"
-            }
         }
     }
 }

@@ -3,6 +3,9 @@
     "$id": "https://json.schemastore.org/mason-registry.json/components/sources/github/release",
     "type": "object",
     "required": ["id", "asset"],
+    "not": {
+        "required": ["supported_platforms"]
+    },
     "properties": {
         "id": {
             "type": "string",
