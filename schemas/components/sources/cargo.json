@@ -7,13 +7,6 @@
         "id": {
             "type": "string",
             "pattern": "^pkg:cargo/.+@.+"
-        },
-        "supported_platforms": {
-            "type": "array",
-            "description": "List of platforms supported by the cargo package.",
-            "items": {
-                "$ref": "/mason-registry.json/enums/platform"
-            }
         }
     }
 }
