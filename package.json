@@ -13,6 +13,6 @@
     "@hyperjump/json-schema-bundle": "^0.4.0",
     "@jridgewell/resolve-uri": "^3.1.0",
     "glob": "^8.0.3",
-    "parse-uri": "^1.0.7"
+    "parse-uri": "^2.0.0"
   }
 }
