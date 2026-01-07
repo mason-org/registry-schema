@@ -11,7 +11,8 @@
         },
         "since": {
             "type": "string",
-            "description": "The version number when the deprecation was made."
+            "description": "The date when the deprecation was made.",
+            "format": "date"
         }
     }
 }
